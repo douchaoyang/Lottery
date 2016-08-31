@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge">
+<meta name="author" content="douchaoyang">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="description" content="窦超阳，douchaoyang，gitHub，github，敢于有心无心境，得自有意无意间">
+<meta name="keywords" content="窦超阳,窦,douchaoyang,Douchaoyang,DOUCHAOYANG,gitHub,github,GITHUB,young,Young,YOUNG,个人简历,动感超阳,阳仔,阳哥,超阳仔,大个儿,篮球,死神,火影忍者,海贼王">
+<title>Lottery - douchaoyang</title>
+<style type="text/css">
+/*basic.css - Written by douchaoyang in September 2015*/
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0;}
+body,button,input,select,textarea{font-size:12px;font-family:"Microsoft Yahei",arial;outline:none;}
+em,strong,th,i{font-style:normal;font-weight:normal;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+a{text-decoration:none;cursor:pointer;outline:none;}
+table{border-collapse:collapse;border-spacing:0;}
+ol,ul,li{list-style:none;}
+fieldset,img{border:0;}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;overflow:hidden;}
+.clearfix{*zoom:1;}
+/*basic end*/
+body{background-color: #202020; overflow: hidden;}
+#lottery{width: 600px; height: 600px; overflow: hidden; font-size: 32px; margin: 40px auto 0;}
+#lottery table{width: 100%;height: 100%;}
+#lottery table td{width: 198px; height: 198px; border: 1px solid #fff; background-color: #000; color: #fff; text-align: center;}
+#lottery table td.lottery-light{background-color: #fff; color: #000;}
+#begin{display: block; width: 100%; height: 100%; line-height: 200px; color: #fff;}
+</style>
+</head>
+<body>
+	<div id="lottery">
+		<table cellpadding="0" cellspacing="0">
+			<tr>
+				<td class="lottery-unit lottery-unit-0">1</td>
+				<td class="lottery-unit lottery-unit-1">2</td>
+				<td class="lottery-unit lottery-unit-2">3</td>
+			</tr>
+			<tr>
+				<td class="lottery-unit lottery-unit-7">8</td>
+				<td><a href="javascript:;" id="begin">开始</a></td>
+				<td class="lottery-unit lottery-unit-3">4</td>
+			</tr>
+			<tr>
+				<td class="lottery-unit lottery-unit-6">7</td>
+				<td class="lottery-unit lottery-unit-5">6</td>
+				<td class="lottery-unit lottery-unit-4">5</td>
+			</tr>
+		</table>
+	</div>
+<script type="text/javascript" src="Lottery.js"></script>
+<script type="text/javascript">
+/*
+var lottery=new Lottery({
+	prefix:"lottery-unit",抽奖元素类名前缀 例如：class="lottery-unit lottery-unit-1"
+	light:"lottery-light",抽奖元素高亮样式类名
+	loop:5,循环转圈的次数
+	speed:50初始滚动速度
+});
+
+抽奖开始
+lottery.Run(
+	n,抽中第几个 ，必须为数字
+	function(){
+		这里是回调函数的内容
+	}
+);
+*/
+var n=5;
+var lottery=new Lottery({
+	loop:5
+});
+document.getElementById("begin").onclick=function(){
+	lottery.Run(n,function(){
+		alert(n)
+	});
+}
+</script>
+</body>
+</html>
