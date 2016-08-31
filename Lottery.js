@@ -1,3 +1,10 @@
+/*
+**@package Lottery
+**@version 1.0.1
+**@Author  douchaoyang
+**@Date    2016-06-06
+**@Link    http://www.tiancity.com
+*/
 var _$_Lottery={
 	flag:true,
 	extend:function(destination, source) {
