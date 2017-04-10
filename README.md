@@ -8,15 +8,13 @@ var lottery=new Lottery({
 	prefix:"lottery-unit",抽奖元素类名前缀 例如：class="lottery-unit lottery-unit-1"
 	light:"lottery-light",抽奖元素高亮样式类名
 	loop:5,循环转圈的次数
-	speed:50初始滚动速度
+	speed:50 初始滚动速度
 });
 
 抽奖开始
 lottery.Run(
-	n,抽中第几个 ，必须为数字
+	n,抽中第几个, 必须为数字
 	function(){
 		这里是回调函数的内容
 	}
 );
-
-演示地址：https://douchaoyang.github.io/sc/Lottery/
